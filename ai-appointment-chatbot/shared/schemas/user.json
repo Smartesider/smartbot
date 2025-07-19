@@ -1,0 +1,34 @@
+{
+  "$id": "https://example.com/user.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the user."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of the user."
+    },
+    "password": {
+      "type": "string",
+      "description": "Password for the user account."
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the user."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the user was created."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the user was last updated."
+    }
+  },
+  "required": ["id", "email", "password", "name", "created_at", "updated_at"]
+}

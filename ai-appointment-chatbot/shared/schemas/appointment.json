@@ -1,0 +1,43 @@
+{
+  "$id": "https://example.com/appointment.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the appointment."
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the appointment."
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the appointment."
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Start time of the appointment in ISO 8601 format."
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "End time of the appointment in ISO 8601 format."
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "email",
+        "description": "Email address of the attendee."
+      },
+      "description": "List of email addresses of attendees."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["scheduled", "cancelled", "completed"],
+      "description": "Current status of the appointment."
+    }
+  },
+  "required": ["id", "title", "start_time", "end_time", "status"]
+}
